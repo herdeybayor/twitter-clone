@@ -77,7 +77,9 @@ const Tweet = ({
       <div className="flex space-x-3">
         <div className="relative h-10 w-10 flex-shrink-0">
           <Image
-            src={`/api/imageproxy?url=${encodeURIComponent(profileImg)}`}
+            src={`${
+              process.env.NEXT_PUBLIC_BASE_URL
+            }/api/imageproxy?url=${encodeURIComponent(profileImg)}`}
             alt="profile image"
             objectFit="cover"
             layout="fill"
@@ -102,7 +104,9 @@ const Tweet = ({
           {image && (
             <div className="relative m-5 ml-0 mb-1 aspect-auto h-44 shadow-sm">
               <Image
-                src={`/api/imageproxy?url=${encodeURIComponent(image)}`}
+                src={`${
+                  process.env.NEXT_PUBLIC_BASE_URL
+                }/api/imageproxy?url=${encodeURIComponent(image)}`}
                 alt="tweet image"
                 objectFit="contain"
                 layout="fill"
@@ -159,7 +163,9 @@ const Tweet = ({
 
               <div className="relative mt-2 h-7 w-7 flex-shrink-0">
                 <Image
-                  src={`/api/imageproxy?url=${encodeURIComponent(
+                  src={`${
+                    process.env.NEXT_PUBLIC_BASE_URL
+                  }/api/imageproxy?url=${encodeURIComponent(
                     comment.profileImg
                   )}`}
                   alt="profile image"

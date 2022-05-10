@@ -6,6 +6,8 @@ module.exports = {
       'links.papareact.com',
       'lh3.googleusercontent.com',
       'pbs.twimg.com',
+      'localhost',
+      'twitter-clone-herdeybayor.vercel.app',
     ],
   },
 }

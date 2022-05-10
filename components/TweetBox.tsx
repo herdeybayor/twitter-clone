@@ -138,7 +138,9 @@ const TweetBox = ({ setTweets, setIsFetching }: Props) => {
             <div className="-ml-[72px] mt-10 sm:-ml-0">
               <div className="relative aspect-auto h-44">
                 <Image
-                  src={`/api/imageproxy?url=${encodeURIComponent(image)}`}
+                  src={`${
+                    process.env.NEXT_PUBLIC_BASE_URL
+                  }/api/imageproxy?url=${encodeURIComponent(image)}`}
                   alt="tweet image"
                   objectFit="contain"
                   layout="fill"
