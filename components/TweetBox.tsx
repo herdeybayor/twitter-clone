@@ -46,10 +46,13 @@ const TweetBox = ({ setTweets, setIsFetching }: Props) => {
       image: image,
     }
 
-    const result = await fetch(`api/addTweet`, {
-      body: JSON.stringify(tweetBody),
-      method: 'POST',
-    })
+    const result = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/addTweet`,
+      {
+        body: JSON.stringify(tweetBody),
+        method: 'POST',
+      }
+    )
 
     const json = await result.json()
 
