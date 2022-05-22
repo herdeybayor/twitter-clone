@@ -40,7 +40,7 @@ export default Home
 export const getServerSideProps: GetServerSideProps = async (context) => {
   context.res.setHeader(
     'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
+    'no-cache, no-store, max-age=0, must-revalidate'
   )
   const tweets = await fetchTweets()
   const session = await getSession(context)
