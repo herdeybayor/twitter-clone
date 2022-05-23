@@ -42,13 +42,10 @@ const Tweet = ({
       tweetId: tweet._id,
     }
 
-    const result = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}/api/addComment`,
-      {
-        body: JSON.stringify(commentBody),
-        method: 'POST',
-      }
-    )
+    const result = await fetch(`api/addComment`, {
+      body: JSON.stringify(commentBody),
+      method: 'POST',
+    })
 
     const json = await result.json()
 

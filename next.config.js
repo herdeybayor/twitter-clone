@@ -8,7 +8,6 @@ module.exports = {
       'pbs.twimg.com',
       'localhost',
       'twitter-clone-herdeybayor.vercel.app',
-      'platform-lookaside.fbsbx.com',
     ],
   },
 }
