@@ -22,7 +22,7 @@ export default async function handler(
 
   res.setHeader(
     'Cache-Control',
-    'public, s-maxage=10, stale-while-revalidate=59'
+    'no-cache, no-store, max-age=0, must-revalidate'
   )
   res.status(200).json({ tweets })
 }
