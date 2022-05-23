@@ -20,5 +20,9 @@ export default async function handler(
 ) {
   const tweets: Tweet[] = await sanityClient.fetch(feedQuery)
 
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
   res.status(200).json({ tweets })
 }
